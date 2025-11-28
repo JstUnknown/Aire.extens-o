@@ -1,0 +1,10 @@
+chrome.runtime.onMessage.addListener((msg)=>{
+    if(msg.command==="scrollUp"){
+        window.scrollBy({top:-80,behavior:"smooth"})
+    }if(msg.command==="scrollDown"){
+        window.scrollBy({top:80,behavior:"smooth"})
+    }
+    if(msg.command==="openTab"){
+        window.open("https://github.com/","_blank")
+    }
+})
