@@ -1,0 +1,26 @@
+{
+    "manifest_version":1,
+    "name":"controle por gestos",
+    "version":"1.0",
+    "description":"controla a pagina por gestos",
+    "permissions":[
+        "activeTab",
+        "scripting",
+        "Tabs"
+    ],
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "web_accessible_resources":[
+        {
+            "resources":["handtrack.min.js"],
+            "matches":["<all_urls>"]
+        }
+    ]
+}
