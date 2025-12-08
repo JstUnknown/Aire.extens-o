@@ -1,3 +1,4 @@
+console.log("content ativo")
 chrome.runtime.onMessage.addListener((msg)=>{
     if(msg.command==="scrollUp"){
         window.scrollBy({top:-80,behavior:"smooth"})
