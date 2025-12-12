@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aire</title>
-    <style>
-        video{
-            width: 300px; height: 300px; border: 1px solid #ccc;
-        }
-    </style>
+   <meta charset="utf-8">
+   <title>Controle por Gestos</title>
+   <style>
+       body { font-family: sans-serif; text-align: center; }
+       video, canvas {
+           width: 320px;
+           height: 240px;
+           border: 1px solid #ccc;
+       }
+       #status {
+           margin-top: 10px;
+           font-size: 14px;
+           color: #333;
+       }
+   </style>
 </head>
+
+
 <body>
-    <h3>Aire</h3>
-    <video id="video" autoplay></video>
-    <div id="status">carregando...</div>
-    <script src="handtrack.min.js"></script>
-    <script src="popup.js"></script>
+   <h2>Controle por Gestos</h2>
+   <video id="video" autoplay></video>
+   <canvas id="canvas"></canvas>
+   <p id="status">Carregando modelo...</p>
+
+
+   <script src="handtrack.min.js"></script>
+   <script src="popup.js"></script>
 </body>
 </html>
